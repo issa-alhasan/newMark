@@ -12,6 +12,7 @@ import { NgForOf } from '@angular/common';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SelectComponent } from './components/select/select.component';
 import { ProductComponent } from '../products/components/product/product.component';
+import { ProductDetailsComponent } from '../products/components/product-details/product-details.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ProductComponent } from '../products/components/product/product.compone
     HeaderComponent,
     SpinnerComponent,
     SelectComponent,
-    ProductComponent
+    ProductComponent,
+    ProductDetailsComponent
     
   ],
   imports: [
@@ -32,9 +34,11 @@ import { ProductComponent } from '../products/components/product/product.compone
   ],
   exports:[
     SpinnerComponent,
+    FormsModule,
     HeaderComponent,
     SelectComponent,
-    ProductComponent
+    ProductComponent,
+    ProductDetailsComponent
   ]
 })
 export class SharedModule { }

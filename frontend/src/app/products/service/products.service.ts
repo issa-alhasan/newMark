@@ -17,4 +17,8 @@ getAllCategories(){
 getProductByCategory(keyword:string){
   return this.http.get(environment.baseApi+'products/category/'+keyword)
 }
+getProductById(id:any){
+  return this.http.get(environment.baseApi+'products/'+id)
+
+}
 }

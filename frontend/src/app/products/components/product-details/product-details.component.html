@@ -1,1 +1,24 @@
-<p>product-details works!</p>
+<div class="box">
+    <div class="row" *ngIf="!loading">
+        <div class="col-md-5 col-sm-12">
+            <img src="{{data.image}}" alt="sas">
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <div class="info">
+                <ul class="list-unstyed">
+                    <li><strong>Title: </strong> {{data.title}}</li>
+                    <li><strong>category: </strong> {{data.category}}</li>
+                    <li><strong>description: </strong> {{data.description}}</li>
+                    <li><strong>rate: </strong> {{data.rating.rate}}</li>
+                    <li><strong>count: </strong> {{data.rating.count}}</li>
+                    <li><strong>price: </strong> {{data.price}} $</li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="text-center w-300" *ngIf="loading"> <app-spinner></app-spinner></div>
+
+
+</div>
